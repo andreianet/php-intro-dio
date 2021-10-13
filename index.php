@@ -1,5 +1,7 @@
 <?php
-   session_start(); //têm que vir antes de tudo
+
+include"service/serviceMsgSession.php";
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,12 +20,12 @@
 
 <form action="script.php" method="post">
     <?php
-        $msgSucess = isset($_SESSION['msg-of-sucess']) ? $_SESSION['msg-of-sucess'] :''; //ternário
+        $msgSucess = obterMsgSuccess(); 
         if (!empty($msgSucess)) {
             echo 'Message of Sucess';
         }
 
-        $msgError = isset($_SESSION['msg-of-error']) ? $_SESSION['msg-of-error'] :''; 
+        $msgError = obterMsgError();  
         if (!empty($msgError)) {
             echo 'Message of Error';
         }
