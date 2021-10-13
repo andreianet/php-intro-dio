@@ -35,6 +35,3 @@ function removerMsgError() : void
     if (isset($_SESSION['msg-of-error'])) 
         unset($_SESSION['msg-of-error']);
 }
-
-
-?>

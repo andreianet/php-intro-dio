@@ -22,12 +22,12 @@ include"service/serviceMsgSession.php";
     <?php
         $msgSucess = obterMsgSuccess(); 
         if (!empty($msgSucess)) {
-            echo 'Message of Sucess';
+            echo $msgSucess;
         }
 
         $msgError = obterMsgError();  
         if (!empty($msgError)) {
-            echo 'Message of Error';
+            echo $msgError;
         }
     ?>
     <p>>Name: <input type="text" name="name" /></p>
@@ -35,7 +35,4 @@ include"service/serviceMsgSession.php";
     <p><input type="submit" value="Enviar dados do competidor"/></p>
 </form>
 </body>
-
-
-
 </html>
